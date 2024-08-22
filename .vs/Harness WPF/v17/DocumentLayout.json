@@ -1,0 +1,139 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\AFG\\Desktop\\harnesses\\Harness WPF\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F5527B72-4815-4FDC-B288-15D70F09A7DF}|Harness WPF\\Harness WPF.csproj|c:\\users\\afg\\desktop\\harnesses\\harness wpf\\harness wpf\\persistence\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5527B72-4815-4FDC-B288-15D70F09A7DF}|Harness WPF\\Harness WPF.csproj|solutionrelative:harness wpf\\persistence\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5527B72-4815-4FDC-B288-15D70F09A7DF}|Harness WPF\\Harness WPF.csproj|c:\\users\\afg\\desktop\\harnesses\\harness wpf\\harness wpf\\domain\\entities\\harnesswires.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5527B72-4815-4FDC-B288-15D70F09A7DF}|Harness WPF\\Harness WPF.csproj|solutionrelative:harness wpf\\domain\\entities\\harnesswires.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5527B72-4815-4FDC-B288-15D70F09A7DF}|Harness WPF\\Harness WPF.csproj|c:\\users\\afg\\desktop\\harnesses\\harness wpf\\harness wpf\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5527B72-4815-4FDC-B288-15D70F09A7DF}|Harness WPF\\Harness WPF.csproj|solutionrelative:harness wpf\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5527B72-4815-4FDC-B288-15D70F09A7DF}|Harness WPF\\Harness WPF.csproj|c:\\users\\afg\\desktop\\harnesses\\harness wpf\\harness wpf\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F5527B72-4815-4FDC-B288-15D70F09A7DF}|Harness WPF\\Harness WPF.csproj|solutionrelative:harness wpf\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5527B72-4815-4FDC-B288-15D70F09A7DF}|Harness WPF\\Harness WPF.csproj|c:\\users\\afg\\desktop\\harnesses\\harness wpf\\harness wpf\\persistence\\applicationdbcontextinitialiser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5527B72-4815-4FDC-B288-15D70F09A7DF}|Harness WPF\\Harness WPF.csproj|solutionrelative:harness wpf\\persistence\\applicationdbcontextinitialiser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5527B72-4815-4FDC-B288-15D70F09A7DF}|Harness WPF\\Harness WPF.csproj|c:\\users\\afg\\desktop\\harnesses\\harness wpf\\harness wpf\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5527B72-4815-4FDC-B288-15D70F09A7DF}|Harness WPF\\Harness WPF.csproj|solutionrelative:harness wpf\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F5527B72-4815-4FDC-B288-15D70F09A7DF}|Harness WPF\\Harness WPF.csproj|c:\\users\\afg\\desktop\\harnesses\\harness wpf\\harness wpf\\domain\\entities\\harnessdrawing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5527B72-4815-4FDC-B288-15D70F09A7DF}|Harness WPF\\Harness WPF.csproj|solutionrelative:harness wpf\\domain\\entities\\harnessdrawing.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 6,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AssemblyInfo.cs",
+              "DocumentMoniker": "C:\\Users\\AFG\\Desktop\\harnesses\\Harness WPF\\Harness WPF\\AssemblyInfo.cs",
+              "RelativeDocumentMoniker": "Harness WPF\\AssemblyInfo.cs",
+              "ToolTip": "C:\\Users\\AFG\\Desktop\\harnesses\\Harness WPF\\Harness WPF\\AssemblyInfo.cs",
+              "RelativeToolTip": "Harness WPF\\AssemblyInfo.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T16:20:18.444Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\AFG\\Desktop\\harnesses\\Harness WPF\\Harness WPF\\appsettings.json",
+              "RelativeDocumentMoniker": "Harness WPF\\appsettings.json",
+              "ToolTip": "C:\\Users\\AFG\\Desktop\\harnesses\\Harness WPF\\Harness WPF\\appsettings.json",
+              "RelativeToolTip": "Harness WPF\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAA9AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-22T16:19:53.541Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ApplicationDbContextInitialiser.cs",
+              "DocumentMoniker": "C:\\Users\\AFG\\Desktop\\harnesses\\Harness WPF\\Harness WPF\\Persistence\\ApplicationDbContextInitialiser.cs",
+              "RelativeDocumentMoniker": "Harness WPF\\Persistence\\ApplicationDbContextInitialiser.cs",
+              "ToolTip": "C:\\Users\\AFG\\Desktop\\harnesses\\Harness WPF\\Harness WPF\\Persistence\\ApplicationDbContextInitialiser.cs",
+              "RelativeToolTip": "Harness WPF\\Persistence\\ApplicationDbContextInitialiser.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAgwB0AAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T16:18:29.073Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "App.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\AFG\\Desktop\\harnesses\\Harness WPF\\Harness WPF\\App.xaml.cs",
+              "RelativeDocumentMoniker": "Harness WPF\\App.xaml.cs",
+              "ToolTip": "C:\\Users\\AFG\\Desktop\\harnesses\\Harness WPF\\Harness WPF\\App.xaml.cs",
+              "RelativeToolTip": "Harness WPF\\App.xaml.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAA0AAAAxAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T16:16:09.22Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "HarnessWires.cs",
+              "DocumentMoniker": "C:\\Users\\AFG\\Desktop\\harnesses\\Harness WPF\\Harness WPF\\Domain\\Entities\\HarnessWires.cs",
+              "RelativeDocumentMoniker": "Harness WPF\\Domain\\Entities\\HarnessWires.cs",
+              "ToolTip": "C:\\Users\\AFG\\Desktop\\harnesses\\Harness WPF\\Harness WPF\\Domain\\Entities\\HarnessWires.cs",
+              "RelativeToolTip": "Harness WPF\\Domain\\Entities\\HarnessWires.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T16:15:47.722Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "HarnessDrawing.cs",
+              "DocumentMoniker": "C:\\Users\\AFG\\Desktop\\harnesses\\Harness WPF\\Harness WPF\\Domain\\Entities\\HarnessDrawing.cs",
+              "RelativeDocumentMoniker": "Harness WPF\\Domain\\Entities\\HarnessDrawing.cs",
+              "ToolTip": "C:\\Users\\AFG\\Desktop\\harnesses\\Harness WPF\\Harness WPF\\Domain\\Entities\\HarnessDrawing.cs",
+              "RelativeToolTip": "Harness WPF\\Domain\\Entities\\HarnessDrawing.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T16:14:05.185Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\AFG\\Desktop\\harnesses\\Harness WPF\\Harness WPF\\Persistence\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Harness WPF\\Persistence\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\AFG\\Desktop\\harnesses\\Harness WPF\\Harness WPF\\Persistence\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Harness WPF\\Persistence\\ApplicationDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAAtAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T14:26:42.844Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
