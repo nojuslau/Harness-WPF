@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 namespace Harness_WPF.Domain.Entities;
 public class HarnessWires : BaseEntity
 {
+    [Required]
     public int HarnessID { get; set; }
     [MaxLength(EntityConstants.DEFAULT_VARCHAR_LENGHT)]
     public string? Length { get; set; }

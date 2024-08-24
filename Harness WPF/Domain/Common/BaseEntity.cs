@@ -3,6 +3,7 @@
 namespace Harness_WPF.Domain.Common;
 public abstract class BaseEntity
 {
+    [Required]
     [Key]
-    public string Id { get; init; }
+    public int Id { get; init; }
 }
