@@ -90,11 +90,9 @@ C:\Users\AFG\Desktop\harnesses\Harness WPF\Harness WPF\bin\Debug\net8.0-windows\
 C:\Users\AFG\Desktop\harnesses\Harness WPF\Harness WPF\bin\Debug\net8.0-windows\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\AFG\Desktop\harnesses\Harness WPF\Harness WPF\bin\Debug\net8.0-windows\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\AFG\Desktop\harnesses\Harness WPF\Harness WPF\obj\Debug\net8.0-windows\Harness WPF.csproj.AssemblyReference.cache
-C:\Users\AFG\Desktop\harnesses\Harness WPF\Harness WPF\obj\Debug\net8.0-windows\MainWindow.g.cs
 C:\Users\AFG\Desktop\harnesses\Harness WPF\Harness WPF\obj\Debug\net8.0-windows\App.g.cs
 C:\Users\AFG\Desktop\harnesses\Harness WPF\Harness WPF\obj\Debug\net8.0-windows\Harness WPF_MarkupCompile.cache
 C:\Users\AFG\Desktop\harnesses\Harness WPF\Harness WPF\obj\Debug\net8.0-windows\Harness WPF_MarkupCompile.lref
-C:\Users\AFG\Desktop\harnesses\Harness WPF\Harness WPF\obj\Debug\net8.0-windows\MainWindow.baml
 C:\Users\AFG\Desktop\harnesses\Harness WPF\Harness WPF\obj\Debug\net8.0-windows\Harness WPF.g.resources
 C:\Users\AFG\Desktop\harnesses\Harness WPF\Harness WPF\obj\Debug\net8.0-windows\Harness WPF.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\AFG\Desktop\harnesses\Harness WPF\Harness WPF\obj\Debug\net8.0-windows\Harness WPF.AssemblyInfoInputs.cache
@@ -139,3 +137,22 @@ C:\Users\AFG\Desktop\harnesses\Harness WPF\Harness WPF\bin\Debug\net8.0-windows\
 C:\Users\AFG\Desktop\harnesses\Harness WPF\Harness WPF\bin\Debug\net8.0-windows\runtimes\win-x64\native\WebView2Loader.dll
 C:\Users\AFG\Desktop\harnesses\Harness WPF\Harness WPF\bin\Debug\net8.0-windows\runtimes\win-x86\native\WebView2Loader.dll
 C:\Users\AFG\Desktop\harnesses\Harness WPF\Harness WPF\bin\Debug\net8.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\AFG\Desktop\harnesses\Harness WPF\Harness WPF\obj\Debug\net8.0-windows\Harness WPF.sourcelink.json
+C:\Users\AFG\Desktop\harnesses\Harness WPF\Harness WPF\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\AFG\Desktop\harnesses\Harness WPF\Harness WPF\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.CommandLine.dll
+C:\Users\AFG\Desktop\harnesses\Harness WPF\Harness WPF\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+C:\Users\AFG\Desktop\harnesses\Harness WPF\Harness WPF\bin\Debug\net8.0-windows\Microsoft.Extensions.Configuration.UserSecrets.dll
+C:\Users\AFG\Desktop\harnesses\Harness WPF\Harness WPF\bin\Debug\net8.0-windows\Microsoft.Extensions.Diagnostics.dll
+C:\Users\AFG\Desktop\harnesses\Harness WPF\Harness WPF\bin\Debug\net8.0-windows\Microsoft.Extensions.Diagnostics.Abstractions.dll
+C:\Users\AFG\Desktop\harnesses\Harness WPF\Harness WPF\bin\Debug\net8.0-windows\Microsoft.Extensions.Hosting.dll
+C:\Users\AFG\Desktop\harnesses\Harness WPF\Harness WPF\bin\Debug\net8.0-windows\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\AFG\Desktop\harnesses\Harness WPF\Harness WPF\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Configuration.dll
+C:\Users\AFG\Desktop\harnesses\Harness WPF\Harness WPF\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Console.dll
+C:\Users\AFG\Desktop\harnesses\Harness WPF\Harness WPF\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.Debug.dll
+C:\Users\AFG\Desktop\harnesses\Harness WPF\Harness WPF\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.EventLog.dll
+C:\Users\AFG\Desktop\harnesses\Harness WPF\Harness WPF\bin\Debug\net8.0-windows\Microsoft.Extensions.Logging.EventSource.dll
+C:\Users\AFG\Desktop\harnesses\Harness WPF\Harness WPF\bin\Debug\net8.0-windows\Microsoft.Extensions.Options.ConfigurationExtensions.dll
+C:\Users\AFG\Desktop\harnesses\Harness WPF\Harness WPF\bin\Debug\net8.0-windows\appsettings.json
+C:\Users\AFG\Desktop\harnesses\Harness WPF\Harness WPF\obj\Debug\net8.0-windows\Harness WPF_Content.g.cs
+C:\Users\AFG\Desktop\harnesses\Harness WPF\Harness WPF\obj\Debug\net8.0-windows\Views\MainWindow.g.cs
+C:\Users\AFG\Desktop\harnesses\Harness WPF\Harness WPF\obj\Debug\net8.0-windows\Views\MainWindow.baml

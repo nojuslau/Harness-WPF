@@ -1,38 +1,59 @@
-﻿using Microsoft.Extensions.Configuration;
+﻿using Harness_WPF.Persistence;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using System.IO;
+using Microsoft.Extensions.Hosting;
 using System.Windows;
 
 namespace Harness_WPF
 {
-    /// <summary>
-    /// Interaction logic for App.xaml
-    /// </summary>
     public partial class App : Application
     {
-        private IConfiguration _configuration;
-        private ServiceProvider _serviceProvider;
+        private IHost _host;
 
-        protected override void OnStartup(StartupEventArgs e)
+        protected override async void OnStartup(StartupEventArgs e)
         {
-            var builder = new ConfigurationBuilder()
-                .SetBasePath(Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true);
+            base.OnStartup(e);
 
-            _configuration = builder.Build();
+            _host = Host.CreateDefaultBuilder()
+                .ConfigureAppConfiguration((context, builder) =>
+                {
+                    builder.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+                })
+                .ConfigureServices((context, services) =>
+                {
+                    ConfigureServices(context.Configuration, services);
+                })
+                .Build();
 
-            var serviceCollection = new ServiceCollection();
-            ConfigureServices(serviceCollection);
+            // Initialise and seed the database
+            var dbInitializer = _host.Services.GetRequiredService<ApplicationDbContextInitialiser>();
+            await dbInitializer.InitialiseAsync();
+            await dbInitializer.SeedAsync();
 
-            _serviceProvider = serviceCollection.BuildServiceProvider();
-            var mainWindow = _serviceProvider.GetRequiredService<MainWindow>();
-            mainWindow.Show();
+            var mainWindow = _host.Services.GetRequiredService<MainWindow>();
         }
 
-        private void ConfigureServices(IServiceCollection services)
+        private void ConfigureServices(IConfiguration configuration, IServiceCollection services)
         {
-            services.AddSingleton(_configuration);
+            var connectionString = configuration.GetConnectionString("DefaultConnection");
+            if (string.IsNullOrEmpty(connectionString))
+            {
+                throw new InvalidOperationException("Connection string 'DefaultConnection' is missing or empty.");
+            }
+
+            // Register ApplicationDbContext with SQL Server
+            services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlServer(connectionString));
+
+            services.AddScoped<ApplicationDbContextInitialiser>();
             services.AddTransient<MainWindow>();
+        }
+
+        protected override void OnExit(ExitEventArgs e)
+        {
+            _host?.Dispose();
+            base.OnExit(e);
         }
     }
 }
