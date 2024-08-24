@@ -1,59 +1,69 @@
 ﻿using Harness_WPF.Persistence;
+using Harness_WPF.Repositories;
+using Harness_WPF.Views;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
+using System.IO;
 using System.Windows;
 
 namespace Harness_WPF
 {
     public partial class App : Application
     {
-        private IHost _host;
+        private readonly DbContextOptions<ApplicationDbContext> _dbContextOptions;
+        private readonly IConfiguration _configuration;
+        public bool enableSeeding = true;
+
+        public App()
+        {
+            _configuration = BuildConfiguration();
+            _dbContextOptions = BuildDbContextOptions(_configuration);
+        }
 
         protected override async void OnStartup(StartupEventArgs e)
         {
             base.OnStartup(e);
 
-            _host = Host.CreateDefaultBuilder()
-                .ConfigureAppConfiguration((context, builder) =>
-                {
-                    builder.AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
-                })
-                .ConfigureServices((context, services) =>
-                {
-                    ConfigureServices(context.Configuration, services);
-                })
-                .Build();
-
-            // Initialise and seed the database
-            var dbInitializer = _host.Services.GetRequiredService<ApplicationDbContextInitialiser>();
+            using var context = new ApplicationDbContext(_dbContextOptions);
+            var dbInitializer = new ApplicationDbContextInitialiser(context);
             await dbInitializer.InitialiseAsync();
-            await dbInitializer.SeedAsync();
 
-            var mainWindow = _host.Services.GetRequiredService<MainWindow>();
+            if (enableSeeding)
+            {
+                await dbInitializer.SeedAsync();
+            }
+            else
+            {
+                await dbInitializer.DeSeedAsync();
+            } 
+                
+            var repository = new Repository(context);
+            var mainWindow = new MainWindow(repository);
+            mainWindow.Show();
         }
 
-        private void ConfigureServices(IConfiguration configuration, IServiceCollection services)
+        private IConfiguration BuildConfiguration()
         {
+            return new ConfigurationBuilder()
+                .SetBasePath(Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
+                .Build();
+        }
+
+        private DbContextOptions<ApplicationDbContext> BuildDbContextOptions(IConfiguration configuration)
+        {
+            var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
             var connectionString = configuration.GetConnectionString("DefaultConnection");
+            enableSeeding = Convert.ToBoolean(configuration.GetSection("DatabaseSettings:EnableSeeding").Value);
+
             if (string.IsNullOrEmpty(connectionString))
             {
                 throw new InvalidOperationException("Connection string 'DefaultConnection' is missing or empty.");
             }
 
-            // Register ApplicationDbContext with SQL Server
-            services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseSqlServer(connectionString));
+            optionsBuilder.UseSqlServer(connectionString);
 
-            services.AddScoped<ApplicationDbContextInitialiser>();
-            services.AddTransient<MainWindow>();
-        }
-
-        protected override void OnExit(ExitEventArgs e)
-        {
-            _host?.Dispose();
-            base.OnExit(e);
+            return optionsBuilder.Options;
         }
     }
 }
