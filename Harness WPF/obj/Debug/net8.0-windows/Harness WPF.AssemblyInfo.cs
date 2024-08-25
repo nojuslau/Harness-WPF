@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Harness WPF")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8444b3194454c03b1f22a9d5c5eae3601b3e2dff")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b36ac10fb252e2927cd79e2f7e2c4d27f76dec50")]
 [assembly: System.Reflection.AssemblyProductAttribute("Harness WPF")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Harness WPF")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
