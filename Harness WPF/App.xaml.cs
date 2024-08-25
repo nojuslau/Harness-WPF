@@ -1,4 +1,5 @@
-﻿using Harness_WPF.Domain.ViewModels;
+﻿using Harness_WPF.Domain.Entities;
+using Harness_WPF.Domain.ViewModels;
 using Harness_WPF.Persistence;
 using Harness_WPF.Repositories;
 using Harness_WPF.Services;
@@ -15,6 +16,7 @@ namespace Harness_WPF
     {
         private readonly DbContextOptions<ApplicationDbContext> _dbContextOptions;
         private readonly IConfiguration _configuration;
+        private Repository repository;
         public IServiceProvider serviceProvider { get; private set; }
         public bool enableSeeding = true;
 
@@ -31,10 +33,13 @@ namespace Harness_WPF
             var serviceCollection = new ServiceCollection();
             ConfigureServices(serviceCollection);
             serviceProvider = serviceCollection.BuildServiceProvider();
-            using var context = new ApplicationDbContext(_dbContextOptions);
+
+            // Database context
+            using var context = serviceProvider.GetRequiredService<ApplicationDbContext>();
             var dbInitializer = new ApplicationDbContextInitialiser(context);
             await dbInitializer.InitialiseAsync();
 
+            // Seeds first data into database
             if (enableSeeding)
             {
                 await dbInitializer.SeedAsync();
@@ -44,7 +49,6 @@ namespace Harness_WPF
                 await dbInitializer.DeSeedAsync();
             }
 
-            var repository = new Repository(context);
             var mainWindow = serviceProvider.GetRequiredService<MainWindow>();
             mainWindow.Show();
         }
@@ -52,14 +56,23 @@ namespace Harness_WPF
         private void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<MainWindow>();
-            services.AddSingleton<IService, DrawingService>();
-            services.AddSingleton<DrawingService>();
-            services.AddSingleton<IService, WiresService>();
-            services.AddSingleton<WiresService>();
+
+            // Register the ApplicationDbContext with dependency injection
+            services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlServer(_configuration.GetConnectionString("DefaultConnection")));
+
+            // Register IRepository and Repository
+            services.AddTransient<IRepository, Repository>();
+
+            // Register services generically
+            services.AddTransient(typeof(IService<>), typeof(Service<>));
+
+            // Register ViewModels
             services.AddTransient<HarnessDrawingVM>();
             services.AddTransient<HarnessWiresVM>();
         }
 
+        // App constructor configurations
         private IConfiguration BuildConfiguration()
         {
             return new ConfigurationBuilder()

@@ -4,17 +4,17 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Harness_WPF.Repositories;
 
-public class Repository
+public class Repository : IRepository
 {
     private readonly ApplicationDbContext _context;
+
     public Repository(ApplicationDbContext context)
     {
         _context = context;
     }
 
-    public async Task<List<HarnessDrawing>> GetAllAsync()
+    public async Task<List<T>> GetAllAsync<T>() where T : class
     {
-        return await _context.Set<HarnessDrawing>().ToListAsync();
+        return await _context.Set<T>().ToListAsync();
     }
 }
-

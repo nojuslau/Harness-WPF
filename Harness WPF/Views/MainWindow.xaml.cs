@@ -1,17 +1,14 @@
 ﻿using Harness_WPF.Domain.Entities;
-using Harness_WPF.Domain.ViewModels;
-using Harness_WPF.Repositories;
 using Harness_WPF.Services;
-using Microsoft.Extensions.Configuration;
 using System.Windows;
 
 namespace Harness_WPF.Views
 {
     public partial class MainWindow : Window
     {
-        private readonly DrawingService _drawingService;
+        private readonly IService<HarnessDrawing> _drawingService;
 
-        public MainWindow(DrawingService drawingService)
+        public MainWindow(IService<HarnessDrawing> drawingService)
         {
             _drawingService = drawingService;
             InitializeComponent();
@@ -20,18 +17,15 @@ namespace Harness_WPF.Views
         protected override void OnInitialized(EventArgs e)
         {
             base.OnInitialized(e);
-
             LoadData();
         }
 
-        private void LoadData()
+        private async void LoadData()
         {
             try
             {
-                var data = _drawingService.GetData<HarnessDrawing>();
-
-                //harnessWires = await _repository.GetAllAsync<HarnessWires>();
-                //_harnessDrawings = await _repository.GetAllAsync();
+                var data = await _drawingService.GetDataAsync();
+                MessageBox.Show($"Data loaded successfully.");
             }
             catch (Exception ex)
             {

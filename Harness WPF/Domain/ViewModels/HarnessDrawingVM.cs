@@ -1,11 +1,12 @@
-﻿using Harness_WPF.Services;
+﻿using Harness_WPF.Domain.Entities;
+using Harness_WPF.Services;
 
 namespace Harness_WPF.Domain.ViewModels;
 public class HarnessDrawingVM
 {
-    private readonly IService _service;
+    private readonly IService<HarnessDrawing> _service;
 
-    public HarnessDrawingVM(IService service)
+    public HarnessDrawingVM(IService<HarnessDrawing> service)
     {
         _service = service;
     }
