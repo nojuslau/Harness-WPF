@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Harness_WPF.Services;
 
-namespace Harness_WPF.Domain.ViewModels
+namespace Harness_WPF.Domain.ViewModels;
+public class HarnessDrawingVM
 {
-    internal class HarnessDrawingVM
+    private readonly IService _service;
+
+    public HarnessDrawingVM(IService service)
+    {
+        _service = service;
+    }
+
+    public void ExecuteCommand()
     {
     }
 }

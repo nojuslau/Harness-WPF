@@ -52,8 +52,10 @@ namespace Harness_WPF
         private void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<MainWindow>();
-            services.AddTransient<IService, DrawingService>();
-            services.AddTransient<IService, WiresService>();
+            services.AddSingleton<IService, DrawingService>();
+            services.AddSingleton<DrawingService>();
+            services.AddSingleton<IService, WiresService>();
+            services.AddSingleton<WiresService>();
             services.AddTransient<HarnessDrawingVM>();
             services.AddTransient<HarnessWiresVM>();
         }

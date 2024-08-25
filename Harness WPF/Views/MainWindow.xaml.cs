@@ -13,8 +13,8 @@ namespace Harness_WPF.Views
 
         public MainWindow(DrawingService drawingService)
         {
-            InitializeComponent();
             _drawingService = drawingService;
+            InitializeComponent();
         }
 
         protected override void OnInitialized(EventArgs e)
@@ -32,7 +32,6 @@ namespace Harness_WPF.Views
 
                 //harnessWires = await _repository.GetAllAsync<HarnessWires>();
                 //_harnessDrawings = await _repository.GetAllAsync();
-                MessageBox.Show($"An error occurred while loading data:");
             }
             catch (Exception ex)
             {

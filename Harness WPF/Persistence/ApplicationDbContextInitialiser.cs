@@ -53,10 +53,10 @@ public class ApplicationDbContextInitialiser
         await using var transaction = await _context.Database.BeginTransactionAsync();
         try
         {
-            if (!await _context._harnessDrawings.AnyAsync())
+            if (!await _context.HarnessDrawings.AnyAsync())
             {
                 await _context.Database.ExecuteSqlRawAsync("SET IDENTITY_INSERT Harness_drawing ON");
-                await _context._harnessDrawings.AddRangeAsync(
+                await _context.HarnessDrawings.AddRangeAsync(
                     new HarnessDrawing { Id = 40953, Harness = "S2563532M", HarnessVersion = "S-6", Drawing = "EP", DrawingVersion = "S-4" },
                     new HarnessDrawing { Id = 40442, Harness = "S2563545M", HarnessVersion = "S12", Drawing = "EP", DrawingVersion = "S-4" },
                     new HarnessDrawing { Id = 39087, Harness = "S2563549M", HarnessVersion = "S-9", Drawing = "EP", DrawingVersion = "S-4" },
@@ -67,10 +67,10 @@ public class ApplicationDbContextInitialiser
                 await _context.Database.ExecuteSqlRawAsync("SET IDENTITY_INSERT Harness_drawing OFF");
             }
 
-            if (!await _context._harnessWires.AnyAsync())
+            if (!await _context.HarnessWires.AnyAsync())
             {
                 await _context.Database.ExecuteSqlRawAsync("SET IDENTITY_INSERT Harness_wires ON");
-                await _context._harnessWires.AddRangeAsync(
+                await _context.HarnessWires.AddRangeAsync(
                     new HarnessWires { Id = 3115654, HarnessID = 38643, Length = "950", Color = "R", Housing1 = "C604:19", Housing2 = "P2.BX2:1" },
                     new HarnessWires { Id = 3115655, HarnessID = 38643, Length = "450", Color = "R", Housing1 = "C604:23", Housing2 = "C521:1" },
                     new HarnessWires { Id = 3158749, HarnessID = 39077, Length = "665", Color = "BN", Housing1 = "E71.B:1", Housing2 = "C604:21" },
@@ -100,7 +100,7 @@ public class ApplicationDbContextInitialiser
         await using var transaction = await _context.Database.BeginTransactionAsync();
         try
         {
-            if (!await _context._harnessDrawings.AnyAsync())
+            if (!await _context.HarnessDrawings.AnyAsync())
             {
                 await _context.Database.ExecuteSqlRawAsync("SET IDENTITY_INSERT Harness_drawing ON");
                 var drawingsToRemove = new List<HarnessDrawing>
@@ -112,13 +112,13 @@ public class ApplicationDbContextInitialiser
                     new HarnessDrawing { Id = 38643, Harness = "S2656843M", HarnessVersion = "5", Drawing = "EP", DrawingVersion = "S-4" }
                 };
 
-                _context._harnessDrawings.AttachRange(drawingsToRemove);
-                _context._harnessDrawings.RemoveRange(drawingsToRemove);
+                _context.HarnessDrawings.AttachRange(drawingsToRemove);
+                _context.HarnessDrawings.RemoveRange(drawingsToRemove);
 
                 await _context.SaveChangesAsync();
             }
 
-            if (!await _context._harnessWires.AnyAsync())
+            if (!await _context.HarnessWires.AnyAsync())
             {
                 var wiresToRemove = new List<HarnessWires>
                 {
@@ -134,8 +134,8 @@ public class ApplicationDbContextInitialiser
                     new HarnessWires { Id = 3328454, HarnessID = 40953, Length = "305", Color = "SB", Housing1 = "C620:24", Housing2 = "G508-3" }
                 };
 
-                _context._harnessWires.AttachRange(wiresToRemove);
-                _context._harnessWires.RemoveRange(wiresToRemove);
+                _context.HarnessWires.AttachRange(wiresToRemove);
+                _context.HarnessWires.RemoveRange(wiresToRemove);
                 await _context.SaveChangesAsync();
             }
 

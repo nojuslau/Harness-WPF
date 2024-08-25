@@ -4,15 +4,15 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Harness_WPF.Persistence
 {
-    public class ApplicationDbContext : DbContext
+    public class ApplicationDbContext : DbContext, IApplicationDbContext
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
            : base(options)
         {
         }
 
-        public DbSet<HarnessDrawing> _harnessDrawings { get; set; }
-        public DbSet<HarnessWires> _harnessWires { get; set; }
+        public DbSet<HarnessDrawing> HarnessDrawings { get; set; }
+        public DbSet<HarnessWires> HarnessWires { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
