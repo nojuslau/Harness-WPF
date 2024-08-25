@@ -11,8 +11,8 @@ namespace Harness_WPF.Persistence
         {
         }
 
-        public DbSet<HarnessDrawing> HarnessDrawings { get; set; }
-        public DbSet<HarnessWires> HarnessWires { get; set; }
+        public DbSet<HarnessDrawing> _harnessDrawings { get; set; }
+        public DbSet<HarnessWires> _harnessWires { get; set; }
 
         protected override void OnModelCreating(ModelBuilder builder)
         {

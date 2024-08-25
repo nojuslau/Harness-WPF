@@ -1,5 +1,7 @@
 ﻿using Harness_WPF.Domain.Entities;
+using Harness_WPF.Domain.ViewModels;
 using Harness_WPF.Repositories;
+using Harness_WPF.Services;
 using Microsoft.Extensions.Configuration;
 using System.Windows;
 
@@ -7,24 +9,29 @@ namespace Harness_WPF.Views
 {
     public partial class MainWindow : Window
     {
-        private readonly IConfiguration _configuration;
-        private readonly Repository _repository;
-        private List<HarnessWires> harnessWires;
-        private List<HarnessDrawing> harnessDrawings;
+        private readonly DrawingService _drawingService;
 
-        public MainWindow(Repository repository)
+        public MainWindow(DrawingService drawingService)
         {
             InitializeComponent();
-            _repository = repository;
-            LoadDataAsync().ConfigureAwait(false);
+            _drawingService = drawingService;
         }
 
-        private async Task LoadDataAsync()
+        protected override void OnInitialized(EventArgs e)
+        {
+            base.OnInitialized(e);
+
+            LoadData();
+        }
+
+        private void LoadData()
         {
             try
             {
+                var data = _drawingService.GetData<HarnessDrawing>();
+
                 //harnessWires = await _repository.GetAllAsync<HarnessWires>();
-                harnessDrawings = await _repository.GetAllAsync();
+                //_harnessDrawings = await _repository.GetAllAsync();
                 MessageBox.Show($"An error occurred while loading data:");
             }
             catch (Exception ex)
